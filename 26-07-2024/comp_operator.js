@@ -1,0 +1,7 @@
+console.log("Equal to 2==2",2==2)
+console.log("Equal to 2==2",2!=2)
+console.log("Equal to 2==2",2===2)
+console.log("Equal to 2==2",2!==2)
+console.log("Equal to 2==2",2>=2)
+console.log("Equal to 2==2",2<=2)
+console.log("Equal to 2==2",2>2)

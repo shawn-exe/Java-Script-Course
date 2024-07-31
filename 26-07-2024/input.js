@@ -1,0 +1,6 @@
+const input=prompt("what is ur name?")
+alert(`your name is ${input}`)
+const input1=prompt("what is ur age?")
+alert(`your age is ${input1}`)
+const input3=prompt("what is ur course?")
+alert(`your course is ${input3}`)

@@ -1,0 +1,13 @@
+node_modules/
+
+*.log
+
+.env
+
+npm-debug.log*
+
+yarn.lock
+
+dist/
+
+coverage/

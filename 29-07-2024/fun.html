@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function Demo</h1>
+    <button onclick="exec()">Calulate SI</button>
+
+    <script>
+        function exec()
+        {
+            alert("Let us Calculate")
+            let p=prompt("Enter the Principle");
+            let t=prompt("Enter the time");
+            let r=prompt("Enter the rate");
+            let decision=confirm("Shall we calculate?")
+            if (decision){
+                document.write("<p> you decided to continue</p> <br>")
+                document.write("<p> Simple Intrest: "+eval(p*r*t)/100 + "</p> <br>" )  
+            }
+            else{
+                document.write("<p> you decided to not to Proceed</p> <br>")
+            }
+        }
+    </script>
+    
+</body>
+</html>

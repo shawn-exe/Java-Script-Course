@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theatre Ticket Booking</title>
+</head>
+<body>
+    <h2>Theatre drama</h2>
+    <h4>Your ticket details:</h4>
+    <script>
+
+        let seats = 6
+        let totalSeats=seats
+        const costPerTicket = 9
+        let totalCost = 0;
+        let discount=5
+        let result
+        let finalcost=0
+        if (seats <= 2) {
+            totalCost = seats * costPerTicket;
+           result= `cost is: ${totalCost}`;
+           finalcost+=totalCost
+        } 
+        else if (seats >= 5) {
+            result= "Booking not allowed";
+        }
+         else {
+        let discountamt = (seats*costPerTicket)*(discount/100)
+        totalCost = (seats*costPerTicket)- discountamt
+        result= `cost is: ${totalCost}`
+        finalcost+=totalCost
+       }
+       document.write(result,"<br>");
+       // document.write("Ticket for customer 1 getting 5% discount,", result,"<br>");
+
+
+    //     seats=3
+    //     discount=7
+    //     totalSeats+=seats
+    //     if (seats <= 2) {
+    //         totalCost = seats * costPerTicket;
+    //        result= `cost is: ${totalCost}`;
+    //        finalcost+=totalCost
+    //     } 
+    //     else if (seats >= 5) {
+    //         result= "Booking not allowed";
+    //     }
+    //      else {
+    //     let discountamt = (seats*costPerTicket)*(discount/100)
+    //     totalCost = (seats*costPerTicket)- discountamt
+    //     result= `cost is: ${totalCost}`
+    //     finalcost+=totalCost
+    //    }
+    //     document.write("Ticket for customer 2 getting 7% discount,", result,"<br>");
+
+        
+    //     seats=4
+    //     discount=9
+    //     totalSeats+=seats
+    //     if (seats <= 2) {
+    //         totalCost = seats * costPerTicket;
+    //        result= `cost is: ${totalCost}`;
+    //        finalcost+=totalCost
+    //     } 
+    //     else if (seats >= 5) {
+    //         result= "Booking not allowed";
+    //     }
+    //      else {
+    //     let discountamt = (seats*costPerTicket)*(discount/100)
+    //     totalCost = (seats*costPerTicket)- discountamt
+    //     result= `cost is: ${totalCost}`
+    //     finalcost+=totalCost
+    //    }
+    //     document.write("Ticket for customer 3 getting 9% discount,", result,"<br>");
+
+        
+    //     seats=3
+    //     discount=11
+    //     totalSeats+=seats
+    //     if (seats <= 2) {
+    //         totalCost = seats * costPerTicket;
+    //        result= `cost is: ${totalCost}`;
+    //        finalcost+=totalCost
+    //     } 
+    //     else if (seats >= 5) {
+    //         result= "Booking not allowed";
+    //     }
+    //      else {
+    //     let discountamt = (seats*costPerTicket)*(discount/100)
+    //     totalCost = (seats*costPerTicket)- discountamt
+    //     result= `cost is: ${totalCost}`
+    //     finalcost+=totalCost
+    //    }
+    //     document.write("Ticket for customer 4 getting 11% discount,", result,"<br><br>");
+
+    //     document.write(`For ${totalSeats} tickects you need to pay: ${finalcost} instead of ${totalSeats*costPerTicket} `);
+    </script>
+</body>
+</html>

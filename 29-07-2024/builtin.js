@@ -1,0 +1,6 @@
+console.log(eval(2+2))
+console.log(parseInt("123a56"))
+console.log(isNaN(23))
+console.log(isNaN("hello"))
+console.log(isFinite(124))
+console.log(Number("123"))

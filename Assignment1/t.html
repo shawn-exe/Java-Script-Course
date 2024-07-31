@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Online Booking of Theater Tickets</title>
+    </head>
+    <body>
+        <h1>Theatre Drama</h1>
+        <p>Your ticket details:</p>
+        <script>
+            let cost = 9;
+            const seats = prompt("Enter the number of seats: ");
+            if (seats <= 2) {
+                for (let i = 1; i <= seats; i++) {
+                    document.write(`Ticket for customer ${i} gets no discount, Cost is: $${cost}<br>`);
+                }
+                document.write(`For ${seats} tickets, you need to pay: $${cost * seats}`);
+            } else if (seats >= 5) {
+                document.write("Booking not allowed");
+            } else {
+                let discount = 5;
+                let finalCost;
+                let totalCost = 0;
+                for (let i = 1; i <= seats; i++) {
+                    let discountAmount = (cost * discount) / 100;
+                    finalCost = cost - discountAmount;
+                    document.write(`Ticket for customer ${i} gets ${discount}% discount, Cost is: $${finalCost}<br>`);
+                    totalCost += finalCost;
+                    discount += 2;
+                }
+                document.write(`For ${seats} tickets, you need to pay: $${totalCost} instead of $${cost * seats}`);
+            }
+        </script>
+    </body>
+</html>
