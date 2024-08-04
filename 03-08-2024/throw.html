@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw</title>
+</head>
+<body>
+    <p>
+        Please input the no b/w 5 & 10
+    </p>
+    <input type="text" id="demo">
+    <input type="button" onclick="fun()" value="Test input">
+    <p id="p"></p>
+    <script>
+        function fun(){
+            // const msg=document.getElementById("p")
+            // msg.innerHTML=""
+            let x=document.getElementById('demo').value;
+            try{
+                if(x.trim()=="") throw "empty";
+                if(isNaN(x)) throw "not a number";
+                x=Number(x);
+                if(x<5) throw "too low";
+                if(x>10) throw "too low";
+            }
+        catch(e){//use msg.innerHTML....
+            // msg.innerHTML='input is '+ e;
+            document.getElementById("p").innerHTML='input is '+ e
+        }
+        }
+    </script>
+</body>
+</html>

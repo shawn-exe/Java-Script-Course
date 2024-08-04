@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Email Registration</h1>
+<form action="">
+<table>
+
+    <tr>
+        <input type="text" placeholder="firstname"  name="firstname" maxlength="20"/>
+    </tr>
+    <br><br>
+
+    <tr>
+        <input type="text" placeholder="firstname" name="lastname" maxlength="20"/>
+    </tr>
+    <br><br>
+
+    <tr>
+        <input type="text" placeholder="phone" name="phone" maxlength="100" id="ph"/>
+    </tr>
+    <br><br>
+
+    <tr>
+        <input type="email" placeholder="Email" name="Email" maxlength="100" id="e"/>
+    </tr>
+    <br><br>
+
+    <tr>
+        <input type="password" placeholder="password" name="password" maxlength="20"/>
+    </tr>
+    <br><br>
+
+</table>
+</form>
+<button onclick="val()"> Submit </button>
+
+    <script>
+        function val()
+        {
+            let user=document.getElementById("e").value;
+            let user1=document.getElementById("e");
+
+            let re=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+            let ph1=document.getElementById("ph").value;
+            let ph2=document.getElementById("ph");
+            let re1=/[7-9][0-9]{9}$/
+
+        //     if(re.test(user))
+        // {
+        //     alert("Successfull")
+        //     return  true
+        // }
+        // else
+        // {
+        //     alert("Not a valid eamil")
+        // }
+
+        if(re1.test(ph1))
+        {
+            alert("Successfull")
+            return  true
+        }
+        else
+        {
+            alert("Not a valid phone number")
+        }
+
+
+        }
+    </script>
+</body>
+</html>

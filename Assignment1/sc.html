@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+
+        <label for="num1">num1</label>
+        <input type="number" name="num1" id="num1">
+
+        <br>
+        <br>
+        <label for="num2">num2</label>
+        <input type="number" name="num2" id="num2">
+
+        <br>
+        <br>
+        <input type="button" value="add" onclick="add()"/> 
+        <input type="button" value="sub"  onclick="sub()"/>
+    </form>
+
+    <p id="ans">The anser is: </p>
+
+    <script>
+        function add()
+        {
+            let n1=parseInt(document.querySelector("#num1").value) ;
+            let n2=parseInt(document.getElementById("num2").value);
+            let ans = n1+n2
+
+            document.getElementById('ans').innerHTML+=ans
+        }
+
+        function sub()
+        {
+            let n1=parseInt(document.querySelector("#num1").value) ;
+            let n2=parseInt(document.getElementById("num2").value);
+            let ans = n1-n2
+
+            document.getElementById('ans').innerHTML+=ans
+        }
+    </script>
+</body>
+</html>

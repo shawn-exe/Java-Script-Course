@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pgm1">
+        click on the button to see the result:
+    </p>
+    <form action="">
+        <input type="button" name="" id="" value="click" onclick="first()"/>
+    </form>
+
+    <script>
+        function first(){
+            let a=123;
+            let b=0;
+        try{
+            if(b==0)
+        {
+            throw "divided by 0 error"
+        }
+            document.getElementById('pgm1').innerHTML+='<br> division of '+a+'by '+b+'='+a/b
+        }catch(e){
+            document.getElementById('pgm1').innerHTML+='<br> error encountered '+e
+        }
+        finally{
+            document.getElementById('pgm1').innerHTML+='<br> Thank u'
+
+        }
+    }
+    </script>
+</body>
+</html>
