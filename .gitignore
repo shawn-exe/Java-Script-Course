@@ -1,7 +1,5 @@
 node_modules/
 
-Assignment3/
-
 *.log
 
 .env
