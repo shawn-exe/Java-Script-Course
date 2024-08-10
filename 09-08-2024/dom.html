@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>DOM getelementbyId/Name</title>
+    </head>
+    <body>
+        <p>Please rate the service</p>
+        <p>
+            <label for="poor">Poor</label>
+            <input type="radio" name="rate" value="poor" id="poor">
+
+            <label for="good">Good</label>
+            <input type="radio" name="rate" value="good" id="good">
+
+            <label for="very-good">Very-Good</label>
+            <input type="radio" name="rate" value="very-good" id="very-good">
+
+            <p>
+                <button id="btnRate">Submit</button>
+            </p>
+            <p id="output"></p>
+        </p>
+        <script>
+            let btn=document.getElementById("btnRate");
+            let output=document.getElementById("output");
+            btn.addEventListener('click',()=>{
+                let rates=document.getElementsByName('rate');
+                rates.forEach((rate)=>{
+                    if(rate.checked){
+                        output.innerText="you selected:"+rate.value
+                    }
+                })
+            })
+        </script>
+    </body> 
+</html>
