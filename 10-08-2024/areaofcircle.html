@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+
+        <label for="radius">radius</label>
+        <input type="number" name="radius" id="radius">
+        <input type="button" value="submit" onclick="calculate()"/>
+    </form>
+
+    <p id="ans"></p>
+
+    <script>
+          function calculate()
+        {
+            let radius=parseInt(document.getElementById("radius").value);
+            let ans = 3.142*radius*radius;
+
+            document.getElementById('ans').textContent=`the area is:${ans} `
+        }
+    </script>
+</body>
+</html>

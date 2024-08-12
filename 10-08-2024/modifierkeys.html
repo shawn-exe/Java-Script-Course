@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnkeys">
+        click me with alt,shift or ctrl button
+    </button>
+    <p id="msgkey"></p>
+    <script>
+        let btnkeys=document.getElementById("btnkeys")
+        btnkeys.addEventListener("click",
+            (e)=>{
+                let keys=[];
+                if(e.shiftKey) keys.push("shift");
+                if(e.ctrlKey) keys.push("ctrl");
+                if(e.altKey) keys.push("alt");
+                if(e.metaKey) keys.push("windows");
+            
+            let msg=document.getElementById("msgkey");
+            msg.textContent=`keys:${keys.join("+")}`;
+            }
+        );
+    </script>
+</body>
+</html>

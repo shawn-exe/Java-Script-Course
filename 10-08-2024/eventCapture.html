@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Capture</title>
+</head>
+<body>
+    <div id="grandparent">
+        <button >Grandparent</button>
+    <div id="parent">
+        <button >Parent</button>
+        <button id="child"><p>child</p></button>
+    </div>
+</div>
+    <script>
+
+        document.getElementById("child").addEventListener(
+            "click",
+            function(){
+                alert("you clicked the child element")
+            },
+            {capture:true}
+        )
+
+        document.getElementById("parent").addEventListener(
+            "click",
+            function(){
+                alert("you clicked the parent  element")
+            },
+            {capture:true}
+        );
+    
+
+document.getElementById("grandparent").addEventListener(
+    "click",
+    function(){
+        alert("you clicked the grandparent  element")
+    },
+    {capture:true}
+);
+</script>
+
+    
+</body>
+</html>

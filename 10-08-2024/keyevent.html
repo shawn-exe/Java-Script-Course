@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        document.addEventListener('keydown',(e)=>{
+            var name=e.key;
+            var code =event.code;
+            if (name=="Control"){
+                return;
+        }
+        if (e.ctrlKey){
+                alert(`combination of ctrlkey+${name}\n
+                 key code value:${code}`);
+        }
+        else{
+                alert(`Key pressed:+${name}\n
+                 key code value:${code}`);
+        }
+        },false);
+
+       document.addEventListener('keyup',(e)=>{
+            var name=e.key;
+           
+            if (name=="Control"){
+                alert("control key released");
+        }
+       
+        },false);
+    </script>
+    
+</body>
+</html>
