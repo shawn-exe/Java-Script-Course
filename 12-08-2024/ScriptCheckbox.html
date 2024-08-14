@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>select your favourite color</p>
+    <label><input type="checkbox" name="color" value="red" id="c1"> Red</label>
+    <label><input type="checkbox" name="color" value="blue" id="c2"> blue</label>
+    <label><input type="checkbox" name="color" value="green" id="c3"> green</label>
+    <button id="btn">Selected colors</button>
+    
+    <script>
+        const btn = document.getElementById("btn")
+        btn.addEventListener("click",(event)=>
+    {
+        let checkboxes=document.querySelectorAll(`input[name='color']:checked`)
+        let values=[];
+        checkboxes.forEach((checkbox)=>
+    {
+        values.push(checkbox.value);
+    })
+    alert(values)
+    })
+
+    </script>
+</body>
+</html>

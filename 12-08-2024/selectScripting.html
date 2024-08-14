@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Javascript select element demo</title>
+    </head>
+    <body>
+        <form>
+            <select id="framework">
+                <option value="1">Angular</option>
+                <option value="2">Reactjs</option>
+                <option value="3">Nodejs</option>
+                <option value="4">Emberjs</option>
+            </select>
+            <button id="btn">get the selected index</button>
+        </form>
+        <script>
+            const btn=document.getElementById("btn");
+            const sb=document.getElementById("framework");
+            btn.onclick=(event)=>{
+                //event.preventDefault();
+                alert((sb.selectedIndex)+1);
+            };
+        </script>
+    </body>
+</html>

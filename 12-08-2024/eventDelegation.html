@@ -1,0 +1,73 @@
+<!-- Event Delegation -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+    <style>
+      a {
+        display: block;
+        background-color: #f4f4f4;
+        padding: 10px;
+        margin: 5px;
+        text-decoration: none;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>
+        <a id="home">Home</a>
+        <a id="dashboard">Dashboard</a>
+        <a id="report">Report</a>
+      </li>
+    </ul>
+    <script>
+      // let home = document.getElementById("home");
+      // home.addEventListener("click", (event) => {
+      //   alert("Home menu is clicked");
+      // });
+
+      // let dashboard = document.getElementById("dashboard");
+      // dashboard.addEventListener("click", (event) => {
+      //   alert("Dashboard menu is clicked");
+      // });
+
+      // let report = document.getElementById("report");
+      // report.addEventListener("click", (event) => {
+      //   alert("Report menu is clicked");
+      // });
+
+      // let menu = document.getElementById("menu");
+      // menu.addEventListener("click", (event) => {
+      //   if (event.target.id === "home") {
+      //     alert("Home menu is clicked");
+      //   } else if (event.target.id === "dashboard") {
+      //     alert("Dashboard menu is clicked");
+      //   } else if (event.target.id === "report") {
+      //     alert("Report menu is clicked");
+      //   }
+      // });
+
+      let menu = document.getElementById("menu");
+      menu.addEventListener("click", (event) => {
+        let target = event.target;
+        switch(target.id){
+         case "home":
+           alert("Home menu is clicked");
+           break;
+         case "dashboard":
+           alert("Dashboard menu is clicked");
+           break;
+         case "report":
+           alert("Report menu is clicked");
+           break;
+        }
+      });
+
+    </script>
+  </body>
+</html>

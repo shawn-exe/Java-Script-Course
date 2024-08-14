@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label><input type="radio" name="size" value="XS" id="xs"> XS</label>
+    <label><input type="radio" name="size" value="S" id="s"> S</label>
+    <label><input type="radio" name="size" value="M" id="m"> M</label>
+    <label><input type="radio" name="size" value="L" id="l"> L</label>
+<button id="btn">show selected sizes</button>
+    <script>
+        const btn =document.getElementById("btn");
+        const radiobtns=document.querySelectorAll(`input[name="size"]`);
+        btn.addEventListener("click",()=>
+    {
+        let selectedSize;
+        for (const radiobtn of radiobtns)
+    {
+        if(radiobtn.checked){
+            selectedSize=radiobtn.value;
+            alert(selectedSize)
+            break;
+        }
+    }
+    })
+
+    </script>
+</body>
+</html>
