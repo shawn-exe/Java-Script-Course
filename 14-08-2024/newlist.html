@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+    </ul>
+    <script>
+        const menu =document.getElementById('menu')
+        let l1=document.createElement('li');
+        l1.textContent="Products"
+
+        let l2=document.createElement('li');
+        l2.textContent="About us"
+        
+        let l3=document.createElement('li');
+        l3.textContent="Contact"
+        
+        menu.appendChild(l1)
+        menu.appendChild(l2)
+        menu.appendChild(l3)
+        
+    </script>
+</body>
+</html>

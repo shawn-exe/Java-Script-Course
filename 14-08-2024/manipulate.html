@@ -1,0 +1,27 @@
+<!-- //createElement()--
+let element = document.createElement(htmlTag); -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let div=document.createElement('div')
+        div.id='content'
+        div.className='note'
+        div.innerHTML='<p>Create Element Example</p>'
+        
+
+        let h2=document.createElement('h2')
+        h2.id='heading'
+        h2.className='heading'
+        h2.innerHTML='Add H2 to div'
+        div.appendChild(h2);
+        document.body.appendChild(div)
+    </script>
+</body>
+</html>

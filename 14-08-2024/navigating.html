@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="first-list">
+        <li>Everest</li>
+        <li>Fuji</li>
+        <li>Kilimanjaro</li>
+    </ul>
+ 
+    <ul id="second-list">
+        <li>Karakoram</li>
+        <li>Donali</li>
+        <li>Mont Blanc</li>
+    </ul>
+
+    <script>
+        const firstList=document.getElementById("first-list")
+        const everest =firstList.firstElementChild;
+        const secondList= document.getElementById("second-list")
+        secondList.appendChild(everest)
+
+    </script>
+    
+</body>
+</html>
