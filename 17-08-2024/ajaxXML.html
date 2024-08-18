@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The XMLhttpRequest</h1>
+    <button type="button" onclick="loaddoc()">change</button>
+
+    <table id="demo"></table>
+    
+    <script>
+        function loaddoc()
+        {
+            const xhttp=new XMLHttpRequest();
+            xhttp.onload=function()
+            {
+                myFunction(this);
+            };
+            xhttp.open("GET","catelog.xml")
+            xhttp.send();
+        }
+        function myFunction(xml)
+        {
+            const xmlDoc=xml.responseXML;
+            const x=xmlDoc.getElementsByTagName('CD');
+            let table="<tr><th>Artist</th><th>Title</th></tr>"
+            for (let i=0;i<x.length;i++)
+                {
+                   table +=
+                   "<tr><td>" +
+                    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue+
+                    "</td><td>" +
+                    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+
+                    "</td></tr>";
+                }
+                document.getElementById('demo').innerHTML=table;
+        }
+    </script>
+</body>
+</html>
