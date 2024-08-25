@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+</head>
+<body>
+    <select id="options">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+    </select>
+    <input type="button" value="Select and Remove" onclick="removeitem()">
+
+
+    <script>
+         function removeitem() {
+            let select = document.getElementById('options');
+            let selectedIndex = select.selectedIndex;
+           
+            select.remove(selectedIndex);
+            
+        }
+    </script>
+
+
+</body>
+</html>

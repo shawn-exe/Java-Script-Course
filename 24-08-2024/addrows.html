@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <table id="myTable" border="1">
+        <tr>
+            <td>Row1 cell1</td> <td>Row1 cell2</td>
+        </tr>
+        <tr> <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" value="Insert Row" onclick="insertRow()">
+    
+    <script>
+        function insertRow() {
+            let table = document.getElementById('myTable');
+            let newrow = table.insertRow();
+            let cell1 = newrow.insertCell(0);
+            let cell2 = newrow.insertCell(1);    
+            cell1.textContent = "new cell1";
+            cell2.textContent = "new cell2";
+        }
+    </script>
+</body>
+</html>

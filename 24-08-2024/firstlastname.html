@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" />
+<title>Document</title>
+</head>
+<body>
+<form id="form1" onsubmit="getFormValue(event)">
+  First name: <input type="text" name="fname" value="David"><br>
+  Last name: <input name="lname" value="Beckham"><br>
+  <input type="submit" value="Submit">
+</form>
+
+<div id="output"></div>
+
+<script>
+function getFormValue(event) {
+    event.preventDefault();
+      const form = document.getElementById('form1');
+   const firstName = form.elements['fname'].value;
+   const lastName = form.elements['lname'].value;
+
+  const output = document.getElementById('output');
+  output.innerHTML = 'First Name: ' + firstName + ' Last Name: ' + lastName;
+}
+</script>
+</body>
+</html>
