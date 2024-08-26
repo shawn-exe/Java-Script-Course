@@ -1,0 +1,37 @@
+<countries>
+    <country name="USA">
+        <state>California</state>
+        <state>Florida</state>
+        <state>New York</state>
+        <state>Texas</state>
+        <state>Washington</state>
+    </country>
+    <country name="Canada">
+        <state>Alberta</state>
+        <state>British Columbia</state>
+        <state>Ontario</state>
+        <state>Quebec</state>
+        <state>Manitoba</state>
+    </country>
+    <country name="India">
+        <state>Gujarat</state>
+        <state>Maharashtra</state>
+        <state>Karnataka</state>
+        <state>Tamil Nadu</state>
+        <state>West Bengal</state>
+    </country>
+    <country name="Australia">
+        <state>New South Wales</state>
+        <state>Victoria</state>
+        <state>Queensland</state>
+        <state>Western Australia</state>
+        <state>South Australia</state>
+    </country>
+    <country name="Germany">
+        <state>Bavaria</state>
+        <state>Berlin</state>
+        <state>Hamburg</state>
+        <state>Saxony</state>
+        <state>Hesse</state>
+    </country>
+</countries>
