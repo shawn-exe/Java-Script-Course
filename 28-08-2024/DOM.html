@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form >
+            <label >Visitor Name:</label>
+            <input type="text" id="name">
+            <br><br>
+
+            <label>Number Of Members:</label>
+            <input type="number" id="members" >
+            <br>
+            <br>
+            <label >Contact No:</label>
+            <input type="text" id="contact">
+            <br><br>
+
+            <label>Email:</label>
+            <input type="email" id="email">
+            <br>
+            <br>
+
+            <label> Food:</label>
+            <input type="radio" id="southIndian" name="food" value="South Indian">
+            <label>South Indian</label>
+            <input type="radio" id="northIndian" name="food" value="North Indian">
+            <label >North Indian</label>
+                <input type="radio" id="western" name="food" value="Western">
+                <label >Western</label>
+            <br><br>
+
+            <button type="button" onclick="display()">Submit</button>
+            <br><br>
+        </form>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        function display() {
+            const name = document.getElementById('name').value;
+            const members = document.getElementById('members').value;
+            const contact = document.getElementById('contact').value;
+            const email = document.getElementById('email').value;
+            const food = document.querySelector('input[name="food"]:checked').value;
+
+    const res = `
+          
+                <p>Visitor Name: ${name}</p>
+                <p>Number Of Members: ${members}</p>
+                <p>Contact No:${contact}</p>
+                <p>Email: ${email}</p>
+                <p>Food: ${food}</p>`;
+            document.getElementById('result').innerHTML = res;
+        }
+    </script>
+</body>
+</html>

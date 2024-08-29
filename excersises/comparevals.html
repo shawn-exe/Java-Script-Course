@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <input type="text" id="value1">
+    <input type="text" id="value2">
+    <button onclick="fun()">Check</button>
+    <p id="demo"></p>
+
+    <script>
+        function fun() {
+            const value1 = document.getElementById('value1').value;
+            const value2 = document.getElementById('value2').value;
+            const same = value1 === value2;
+            if(same)
+           {
+            document.getElementById('demo').textContent ="both are same";
+           }
+           else{
+               document.getElementById('demo').textContent = "not same";
+           }
+        }
+    </script>
+</body>
+</html>
